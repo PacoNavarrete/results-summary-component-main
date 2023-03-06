@@ -1,0 +1,197 @@
+@font-face {
+    font-family: hanken-grotesk;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+    /* base colors */
+    --white-100: #fff;
+    --black-100: #000;
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --neutral-light-lavander: hsl(241, 100%, 89%);
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --neutral-dark-blue: hsl(224, 30%, 27%);
+    --neutral-pale-blue: hsl(221, 100%, 96%);
+
+    /* modified colors */
+    --neutral-dark-blue30: hsla(224, 30%, 27%, 0.3);
+    --light-royal-blue50: hsla(241, 81%, 54%, 0);
+    --black-50: hsla(0, 0%, 0%, 0.5);
+    --bg-light-red: hsla(0, 100%, 67%, 0.1);
+    --bg-orange-yellow: hsla(39, 100%, 56%, 0.1);
+    --bg-green-teal: hsla(166, 100%, 37%, 0.1);
+    --bg-cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    --gradient-circle: linear-gradient(var(--neutral-dark-blue30) 30%, var(--light-royal-blue50)100%);
+
+    /* fonts */
+    --font-family-main: hanken-grotesk;
+    --font-size-xs: 0.8rem;
+    --font-size-s: 1rem;
+    --font-size-m: 1.2rem;
+    --font-size-l: 1.4rem;
+    --font-size-2xl: 3.2rem;
+    --font-weight-light: 500;
+    --font-weight-medium: 700;
+    --font-weight-strong: 800;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-family: var(--font-family-main);
+}
+/* Card Container */
+.wrap-cards {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-100);
+    border-radius: 30px;
+    box-shadow: 2px 15px 24px var(--neutral-light-lavander);
+}
+/* Blue Left Card */
+.result-card {
+    width: 280px;
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+    background: var(--gradient-primary);
+    border-radius: 30px;
+    color: var(--neutral-pale-blue);
+}
+.result_title {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-medium);
+}
+/* Circle with score average */
+.result-overall {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient-circle);
+    border-radius: 90px;
+}
+.result_value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--white-100);
+}
+.result_target {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+.message_title {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-medium);
+    color: var(--white-100);
+}
+.message_body {
+    font-size: var(--font-size-xs);
+    text-align: center;
+}
+/* Summary Right Card */
+.summary-card {
+    width: 280px;
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+}
+.summary-title {
+    align-self: self-start;
+    padding-left: 28px;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+}
+/* Container to insert summary details whith JavaScript see ShowResults.js */
+#details-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.detail-box_item {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+.detail-item_reaction {
+    background-color: var(--bg-light-red);
+    color: var(--light-red);
+}
+.detail-item_memory {
+    background-color: var(--bg-orange-yellow);
+    color: var(--orange-yellow);
+}
+.detail-item_verbal {
+    background-color: var(--bg-green-teal);
+    color: var(--green-teal);
+}
+.detail-item_visual {
+    background-color: var(--bg-cobalt-blue);
+    color: var(--cobalt-blue);
+}
+
+.detail_attribute {
+    display: flex;
+    gap: 10px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-strong);
+}
+.detail_result{
+    display: flex;
+    gap: 10px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-strong   );
+    color: var(--black-100);
+}
+.detail_result > span {
+    color: var(--black-50);
+}
+.summary-button {
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--neutral-dark-blue);
+    color: var(--neutral-pale-blue);
+    border: none;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+.summary-button:hover {
+    background: var(--gradient-primary);
+}
+
