@@ -47,7 +47,7 @@ Users should be able to:
 
 ✨Solution hosted by github pages ✨
 
-- Live Site URL: [Go to see it ➡](https://paconavarrete.github.io/results-summary-component-main/)
+- Live Site URL: [Go to see it ➡](https://paconavarrete.github.io/results-summary-component-main/){:target="_blank"}
 
 ## My process
 
@@ -94,14 +94,14 @@ const scoreSummation = extractScores.reduce((prev, current) => {return (prev + c
 
 ### Useful resources
 If you want to solve challenges like this you can visit the Front end mentor site:
-- [Go visit ➡](https://www.frontendmentor.io)
+- [Go visit ➡](https://www.frontendmentor.io){:target="_blank"}
 
 
 ## Author
 
-- Website - [Paco Navarrete](https://github.com/PacoNavarrete)
-- Frontend Mentor - [@PacoNavarrete](https://www.frontendmentor.io/profile/PacoNavarrete)
-- LinkedIn - [@FranciscoCN](https://www.linkedin.com/in/francisco-cienfuegos-navarrete-291619164/)
+- Website - [Paco Navarrete](https://github.com/PacoNavarrete){:target="_blank"}
+- Frontend Mentor - [@PacoNavarrete](https://www.frontendmentor.io/profile/PacoNavarrete){:target="_blank"}
+- LinkedIn - [@FranciscoCN](https://www.linkedin.com/in/francisco-cienfuegos-navarrete-291619164/){:target="_blank"}
 
 
 ## Acknowledgments
